@@ -1,0 +1,1322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="sandmark.program.Class" />
+			<role name="FactoryMethod()" element="sandmark.program.Class::makeCPG(sandmark.program.Class, org.apache.bcel.classfile.ConstantPool):sandmark.program.ConstantPoolGen" />
+			<role name="FactoryMethod()" element="sandmark.program.Class::makeField(sandmark.program.Class, org.apache.bcel.classfile.Field):sandmark.program.Field" />
+			<role name="FactoryMethod()" element="sandmark.program.Class::makeMethod(sandmark.program.Class, org.apache.bcel.classfile.Method):sandmark.program.Method" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.util.newgraph.MissingGraph" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.MissingGraph::addNode(java.lang.Object):sandmark.util.newgraph.Graph" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.MissingGraph::addEdge(sandmark.util.newgraph.Edge):sandmark.util.newgraph.Graph" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.MissingGraph::missingNodes(int):sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.MissingGraph::missingEdges(int):sandmark.util.newgraph.EdgeWrapperIterator" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.util.newgraph.codec.GraphCodec" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.codec.GraphCodec::encodeMutable(java.math.BigInteger, sandmark.util.newgraph.NodeFactory):sandmark.util.newgraph.MutableGraph" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.util.newgraph.Graph" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.Graph::_nodes():sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.Graph::_edges():sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.Graph::_inEdges(sandmark.util.newgraph.NodeWrapper):sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.Graph::_outEdges(sandmark.util.newgraph.NodeWrapper):sandmark.util.newgraph.EdgeWrapperIterator" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.util.newgraph.GraphStyle" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.GraphStyle::localize(sandmark.util.newgraph.Graph):sandmark.util.newgraph.Style" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.GraphStyle::localize(sandmark.util.newgraph.MutableGraph):sandmark.util.newgraph.Style" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.util.newgraph.Edge" />
+			<role name="FactoryMethod()" element="sandmark.util.newgraph.Edge::clone(java.lang.Object, java.lang.Object):sandmark.util.newgraph.Edge" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.watermark.ct.encode.ir2ir.Transformer" />
+			<role name="FactoryMethod()" element="sandmark.watermark.ct.encode.ir2ir.Transformer::mutate():sandmark.watermark.ct.encode.ir.Build" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="FactoryMethod()" element="sandmark.watermark.ct.encode.storage.StorageClass::toJavaStore(sandmark.util.newgraph.Node, sandmark.util.ConfigProperties):sandmark.util.javagen.Statement" />
+			<role name="FactoryMethod()" element="sandmark.watermark.ct.encode.storage.StorageClass::toJavaLoad(sandmark.util.newgraph.Node, sandmark.util.ConfigProperties):sandmark.util.javagen.Expression" />
+			<role name="FactoryMethod()" element="sandmark.watermark.ct.encode.storage.StorageClass::toJavaCreate(sandmark.util.newgraph.MutableGraph, sandmark.util.ConfigProperties):sandmark.util.javagen.Statement" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.diff.methoddiff.MethodDiffAlgorithm" />
+			<role name="FactoryMethod()" element="sandmark.diff.methoddiff.MethodDiffAlgorithm::diffMethods(sandmark.program.Method, sandmark.program.Method):sandmark.diff.Result" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.diff.classdiff.ClassDiffAlgorithm" />
+			<role name="FactoryMethod()" element="sandmark.diff.classdiff.ClassDiffAlgorithm::diffClasses(sandmark.program.Class, sandmark.program.Class):sandmark.diff.Result" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.analysis.stacksimulator.StackData" />
+			<role name="FactoryMethod()" element="sandmark.analysis.stacksimulator.StackData::undefinedVersion():sandmark.analysis.stacksimulator.StackData" />
+		</instance>
+		<instance>
+			<role name="Creator" element="sandmark.wizard.modeling.Model" />
+			<role name="FactoryMethod()" element="sandmark.wizard.modeling.Model::getChoiceAt(int):sandmark.wizard.modeling.Choice" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="sandmark.gui.MultiLineToolTipUI" />
+			<role name="uniqueInstance" element="sandmark.gui.MultiLineToolTipUI::SINGLETON:sandmark.gui.MultiLineToolTipUI" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.util.opaquepredicatelib.smNode" />
+			<role name="uniqueInstance" element="sandmark.util.opaquepredicatelib.smNode::g:sandmark.util.opaquepredicatelib.smNode" />
+			<role name="uniqueInstance" element="sandmark.util.opaquepredicatelib.smNode::h:sandmark.util.opaquepredicatelib.smNode" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.util.Random" />
+			<role name="uniqueInstance" element="sandmark.util.Random::sRand:sandmark.util.Random" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.util.graph.graphview.GraphList" />
+			<role name="uniqueInstance" element="sandmark.util.graph.graphview.GraphList::gl_instance:sandmark.util.graph.graphview.GraphList" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.eclipse.SandMarkPlugin" />
+			<role name="uniqueInstance" element="sandmark.eclipse.SandMarkPlugin::plugin:sandmark.eclipse.SandMarkPlugin" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_PUBLICIZE_FIELDS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_PUBLICIZE_METHODS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_PUBLICIZE_CLASSES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_CONSTANT_POOL:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_FIELD_TYPES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_FIELD_NAMES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_FIELD_SCOPES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_METHOD_NAMES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_METHOD_SIGNATURES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_METHOD_SCOPES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_METHOD_BODIES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_ADD_METHOD_CODE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_REORDER_INSTRUCTIONS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_REMOVE_METHOD_CODE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_MODIFY_METHOD_CODE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_ADD_LOCAL_VARIABLES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_LOCAL_VARIABLES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_CLASS_NAMES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_CLASS_SCOPES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_CHANGE_CLASS_CONTENTS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_ADD_CLASSES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_REMOVE_CLASSES:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_ADD_METHODS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_REMOVE_METHODS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_ADD_FIELDS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_REMOVE_FIELDS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::I_OBFUSCATE_IDENTIFIERS:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::THREAD_UNSAFE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::REFLECTION_UNSAFE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::PERFORMANCE_DEGRADE_HIGH:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::PERFORMANCE_DEGRADE_MED:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::PERFORMANCE_DEGRADE_LOW:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::PERFORMANCE_DEGRADE_NONE:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::p1:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::p2:sandmark.config.ModificationProperty" />
+			<role name="uniqueInstance" element="sandmark.config.ModificationProperty::p3:sandmark.config.ModificationProperty" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodLengthMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodLengthMeasure::singleton:sandmark.metric.HalsteadMethodLengthMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppVocabMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppVocabMeasure::singleton:sandmark.metric.HalsteadAppVocabMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodEffortMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodEffortMeasure::singleton:sandmark.metric.HalsteadMethodEffortMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HarrisonMethodMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HarrisonMethodMeasure::singleton:sandmark.metric.HarrisonMethodMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.McCabeAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.McCabeAppMeasure::singleton:sandmark.metric.McCabeAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkClassInheritanceMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkClassInheritanceMeasure::singleton:sandmark.metric.CkClassInheritanceMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.McCabeClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.McCabeClassMeasure::singleton:sandmark.metric.McCabeClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassMeasure::singleton:sandmark.metric.HalsteadClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.MunsonAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.MunsonAppMeasure::singleton:sandmark.metric.MunsonAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkClassCouplingMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkClassCouplingMeasure::singleton:sandmark.metric.CkClassCouplingMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppVolumeMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppVolumeMeasure::singleton:sandmark.metric.HalsteadAppVolumeMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HarrisonAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HarrisonAppMeasure::singleton:sandmark.metric.HarrisonAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkClassResponseMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkClassResponseMeasure::singleton:sandmark.metric.CkClassResponseMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.KafuraClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.KafuraClassMeasure::singleton:sandmark.metric.KafuraClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkAppInheritanceMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkAppInheritanceMeasure::singleton:sandmark.metric.CkAppInheritanceMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.MunsonClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.MunsonClassMeasure::singleton:sandmark.metric.MunsonClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.LocalIdentifierLength" />
+			<role name="uniqueInstance" element="sandmark.metric.LocalIdentifierLength::singleton:sandmark.metric.LocalIdentifierLength" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.McCabeMethodMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.McCabeMethodMeasure::singleton:sandmark.metric.McCabeMethodMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodDifficultyMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodDifficultyMeasure::singleton:sandmark.metric.HalsteadMethodDifficultyMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppDifficultyMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppDifficultyMeasure::singleton:sandmark.metric.HalsteadAppDifficultyMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodMeasure::singleton:sandmark.metric.HalsteadMethodMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.KafuraAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.KafuraAppMeasure::singleton:sandmark.metric.KafuraAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassVocabMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassVocabMeasure::singleton:sandmark.metric.HalsteadClassVocabMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkAppCouplingMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkAppCouplingMeasure::singleton:sandmark.metric.CkAppCouplingMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassLengthMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassLengthMeasure::singleton:sandmark.metric.HalsteadClassLengthMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkAppResponseMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkAppResponseMeasure::singleton:sandmark.metric.CkAppResponseMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkAppSubclassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkAppSubclassMeasure::singleton:sandmark.metric.CkAppSubclassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppMeasure::singleton:sandmark.metric.HalsteadAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkClassSubclassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkClassSubclassMeasure::singleton:sandmark.metric.CkClassSubclassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.MunsonMethodMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.MunsonMethodMeasure::singleton:sandmark.metric.MunsonMethodMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppLengthMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppLengthMeasure::singleton:sandmark.metric.HalsteadAppLengthMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassDifficultyMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassDifficultyMeasure::singleton:sandmark.metric.HalsteadClassDifficultyMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkClassMeasure::singleton:sandmark.metric.CkClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassEffortMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassEffortMeasure::singleton:sandmark.metric.HalsteadClassEffortMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.ClassIdentifierLength" />
+			<role name="uniqueInstance" element="sandmark.metric.ClassIdentifierLength::singleton:sandmark.metric.ClassIdentifierLength" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodVocabMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodVocabMeasure::singleton:sandmark.metric.HalsteadMethodVocabMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadClassVolumeMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadClassVolumeMeasure::singleton:sandmark.metric.HalsteadClassVolumeMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.AppIdentifierLength" />
+			<role name="uniqueInstance" element="sandmark.metric.AppIdentifierLength::singleton:sandmark.metric.AppIdentifierLength" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.CkAppMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.CkAppMeasure::singleton:sandmark.metric.CkAppMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadAppEffortMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadAppEffortMeasure::singleton:sandmark.metric.HalsteadAppEffortMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HarrisonClassMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HarrisonClassMeasure::singleton:sandmark.metric.HarrisonClassMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.metric.HalsteadMethodVolumeMeasure" />
+			<role name="uniqueInstance" element="sandmark.metric.HalsteadMethodVolumeMeasure::singleton:sandmark.metric.HalsteadMethodVolumeMeasure" />
+		</instance>
+		<instance>
+			<role name="Singleton" element="sandmark.wizard.modeling.Choice" />
+			<role name="uniqueInstance" element="sandmark.wizard.modeling.Choice::DONE:sandmark.wizard.modeling.Choice" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Application" />
+			<role name="Adapter" element="sandmark.obfuscate.interleavemethods.InterleaveMethods" />
+			<role name="adaptee" element="sandmark.obfuscate.interleavemethods.InterleaveMethods::application:sandmark.program.Application" />
+			<role name="Request()" element="sandmark.obfuscate.interleavemethods.InterleaveMethods::apply(sandmark.program.Application):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Application" />
+			<role name="Adapter" element="sandmark.watermark.objectwm.ObjectWatermark" />
+			<role name="adaptee" element="sandmark.watermark.objectwm.ObjectWatermark::myApp:sandmark.program.Application" />
+			<role name="Request()" element="sandmark.watermark.objectwm.ObjectWatermark::embed(sandmark.watermark.StaticEmbedParameters):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Application" />
+			<role name="Adapter" element="sandmark.watermark.steganography.Steganography" />
+			<role name="adaptee" element="sandmark.watermark.steganography.Steganography::app:sandmark.program.Application" />
+			<role name="Request()" element="sandmark.watermark.steganography.Steganography::embed(sandmark.watermark.StaticEmbedParameters):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.watermark.objectwm.ObjectWatermark" />
+			<role name="Adaptee" element="sandmark.watermark.objectwm.Config" />
+			<role name="adaptee" element="sandmark.watermark.objectwm.ObjectWatermark::config:sandmark.watermark.objectwm.Config" />
+			<role name="Request()" element="sandmark.watermark.objectwm.ObjectWatermark::embed(sandmark.watermark.StaticEmbedParameters):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.watermark.objectwm.ObjectWatermark" />
+			<role name="Adaptee" element="sandmark.watermark.objectwm.VectorExtraction" />
+			<role name="adaptee" element="sandmark.watermark.objectwm.ObjectWatermark::vecExtract:sandmark.watermark.objectwm.VectorExtraction" />
+			<role name="Request()" element="sandmark.watermark.objectwm.ObjectWatermark::embed(sandmark.watermark.StaticEmbedParameters):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.gui.ObfuscatePanel" />
+			<role name="Adaptee" element="sandmark.util.ConfigProperties" />
+			<role name="adaptee" element="sandmark.gui.ObfuscatePanel::mConfigProps:sandmark.util.ConfigProperties" />
+			<role name="Request()" element="sandmark.gui.ObfuscatePanel::propertyChanged(sandmark.util.ConfigProperties, java.lang.String, java.lang.Object, java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.gui.OptimisePanel" />
+			<role name="Adaptee" element="sandmark.util.ConfigProperties" />
+			<role name="adaptee" element="sandmark.gui.OptimisePanel::mConfigProps:sandmark.util.ConfigProperties" />
+			<role name="Request()" element="sandmark.gui.OptimisePanel::propertyChanged(sandmark.util.ConfigProperties, java.lang.String, java.lang.Object, java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.gui.QuickProtectPanel" />
+			<role name="Adaptee" element="sandmark.util.ConfigProperties" />
+			<role name="adaptee" element="sandmark.gui.QuickProtectPanel::mConfigProps:sandmark.util.ConfigProperties" />
+			<role name="Request()" element="sandmark.gui.QuickProtectPanel::propertyChanged(sandmark.util.ConfigProperties, java.lang.String, java.lang.Object, java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Method" />
+			<role name="Adapter" element="sandmark.obfuscate.boolsplitter.BoolSplitter" />
+			<role name="adaptee" element="sandmark.obfuscate.boolsplitter.BoolSplitter::mg:sandmark.program.Method" />
+			<role name="Request()" element="sandmark.obfuscate.boolsplitter.BoolSplitter::apply(sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Method" />
+			<role name="Adapter" element="sandmark.obfuscate.instructionordering.InstructionOrdering" />
+			<role name="adaptee" element="sandmark.obfuscate.instructionordering.InstructionOrdering::mg:sandmark.program.Method" />
+			<role name="Request()" element="sandmark.obfuscate.instructionordering.InstructionOrdering::apply(sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.dfa.DFAModel$ChoiceList" />
+			<role name="Adapter" element="sandmark.wizard.modeling.dfa.DFAModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.dfa.DFAModel::mCurrentChoices:sandmark.wizard.modeling.dfa.DFAModel$ChoiceList" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::getChoiceCount():int" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::getChoiceAt(int):sandmark.wizard.modeling.Choice" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::getChoicesAt(int, int):sandmark.wizard.modeling.Choice[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.dfa.DFANode" />
+			<role name="Adapter" element="sandmark.wizard.modeling.dfa.DFAModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.dfa.DFAModel::mCurrentNode:sandmark.wizard.modeling.dfa.DFANode" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::isTerminationPoint():boolean" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::getTerminationChoiceCount():int" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.lazydfa.LazyDFANode" />
+			<role name="Adapter" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::mCurrentNode:sandmark.wizard.modeling.lazydfa.LazyDFANode" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::init(sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner, sandmark.wizard.ObjectProvider, sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::isTerminationPoint():boolean" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::getChoiceCount():int" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::getChoiceAt(int):sandmark.wizard.modeling.Choice" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::getChoicesAt(int, int):sandmark.wizard.modeling.Choice[]" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::choices():java.util.Iterator" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::addedObject(sandmark.program.Object, sandmark.program.Object):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::copiedObject(sandmark.program.Object, sandmark.program.Object, sandmark.program.Object):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::deletingObject(sandmark.program.Object, sandmark.program.Object):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.set.SetModel$ChoiceList" />
+			<role name="Adapter" element="sandmark.wizard.modeling.set.SetModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.set.SetModel::mChoiceList:sandmark.wizard.modeling.set.SetModel$ChoiceList" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::getChoiceCount():int" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::getChoiceAt(int):sandmark.wizard.modeling.Choice" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::getChoicesAt(int, int):sandmark.wizard.modeling.Choice[]" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.lazydfa.LazyDFA" />
+			<role name="Adapter" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::mDFA:sandmark.wizard.modeling.lazydfa.LazyDFA" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::init(sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner, sandmark.wizard.ObjectProvider, sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFAModel::ranChoice(sandmark.wizard.modeling.Choice):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.Status" />
+			<role name="Adapter" element="sandmark.util.newgraph.GraphImpl" />
+			<role name="adaptee" element="sandmark.util.newgraph.GraphImpl::s:sandmark.util.newgraph.Status" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_inEdges(sandmark.util.newgraph.NodeWrapper):sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_inDegree(sandmark.util.newgraph.NodeWrapper):int" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_outEdges(sandmark.util.newgraph.NodeWrapper):sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_outDegree(sandmark.util.newgraph.NodeWrapper):int" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::hasNode(java.lang.Object):boolean" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::hasEdge(sandmark.util.newgraph.Edge):boolean" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_nodes():sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::_edges():sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::nodeCount():int" />
+			<role name="Request()" element="sandmark.util.newgraph.GraphImpl::edgeCount():int" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.IfNotNull" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.IfNotNull::stats:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.IfNotNull::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.IfNotNull::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.VirtualCall" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.VirtualCall::args:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.VirtualCall::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.VirtualCall::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.VirtualFunCall" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.VirtualFunCall::args:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.VirtualFunCall::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.VirtualFunCall::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.Block" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.Block::stats:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.Block::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.Block::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.New" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.New::args:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.New::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.New::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.StaticCall" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.StaticCall::args:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.StaticCall::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.StaticCall::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.StaticFunCall" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.StaticFunCall::args:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.StaticFunCall::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.StaticFunCall::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.javagen.Try" />
+			<role name="Adaptee" element="sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.Try::body:sandmark.util.javagen.List" />
+			<role name="adaptee" element="sandmark.util.javagen.Try::Catch:sandmark.util.javagen.List" />
+			<role name="Request()" element="sandmark.util.javagen.Try::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Request()" element="sandmark.util.javagen.Try::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.Graph" />
+			<role name="Adapter" element="sandmark.util.newgraph.Graph$DepthFirstIterator" />
+			<role name="adaptee" element="sandmark.util.newgraph.Graph$DepthFirstIterator::g:sandmark.util.newgraph.Graph" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$DepthFirstIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Method" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.CallingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::mDestMG:sandmark.program.Method" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::mSrcMG:sandmark.program.Method" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Method" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::mDestMG:sandmark.program.Method" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::mSrcMG:sandmark.program.Method" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.program.Method" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::mDestMG:sandmark.program.Method" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::mSrcMG:sandmark.program.Method" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.watermark.ct.recognize.Recognizer" />
+			<role name="Adapter" element="sandmark.watermark.ct.CT" />
+			<role name="adaptee" element="sandmark.watermark.ct.CT::recognizer:sandmark.watermark.ct.recognize.Recognizer" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::startRecognition(sandmark.watermark.DynamicRecognizeParameters):void" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::watermarks():java.util.Iterator" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::stopRecognition():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.watermark.ct.trace.Tracer" />
+			<role name="Adapter" element="sandmark.watermark.ct.CT" />
+			<role name="adaptee" element="sandmark.watermark.ct.CT::tracer:sandmark.watermark.ct.trace.Tracer" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::startTracing(sandmark.watermark.DynamicTraceParameters):void" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::endTracing():void" />
+			<role name="Request()" element="sandmark.watermark.ct.CT::stopTracing():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.birthmark.wpp.Tracer" />
+			<role name="Adapter" element="sandmark.birthmark.wpp.WPP" />
+			<role name="adaptee" element="sandmark.birthmark.wpp.WPP::tracer:sandmark.birthmark.wpp.Tracer" />
+			<role name="Request()" element="sandmark.birthmark.wpp.WPP::calculate(sandmark.birthmark.DynamicBirthMarkParameters):double" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.watermark.arboit.trace.Tracer" />
+			<role name="Adapter" element="sandmark.watermark.arboit.DynamicAA" />
+			<role name="adaptee" element="sandmark.watermark.arboit.DynamicAA::tracer:sandmark.watermark.arboit.trace.Tracer" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::startTracing(sandmark.watermark.DynamicTraceParameters):void" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::endTracing():void" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::stopTracing():void" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::startRecognition(sandmark.watermark.DynamicRecognizeParameters):void" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::stopRecognition():void" />
+			<role name="Request()" element="sandmark.watermark.arboit.DynamicAA::waitForProgramExit():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.NodeWrapper" />
+			<role name="Adapter" element="sandmark.util.newgraph.Graph$DepthFirstIterator" />
+			<role name="adaptee" element="sandmark.util.newgraph.Graph$DepthFirstIterator::root:sandmark.util.newgraph.NodeWrapper" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$DepthFirstIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.CallingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::mSrcCFG:sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::mSrcCFG:sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::mSrcCFG:sandmark.analysis.controlflowgraph.MethodCFG" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.MutableGraph" />
+			<role name="Adapter" element="sandmark.wizard.modeling.wmdag.WMDAG" />
+			<role name="adaptee" element="sandmark.wizard.modeling.wmdag.WMDAG::myGraph:sandmark.util.newgraph.MutableGraph" />
+			<role name="Request()" element="sandmark.wizard.modeling.wmdag.WMDAG::init(sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner, sandmark.wizard.ObjectProvider, sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.wmdag.WMDAG::getVisualization():sandmark.util.newgraph.Graph" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.dfa.DFA" />
+			<role name="Adapter" element="sandmark.wizard.modeling.dfa.DFAModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.dfa.DFAModel::mDFA:sandmark.wizard.modeling.dfa.DFA" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::init(sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner, sandmark.wizard.ObjectProvider, sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::getVisualization():sandmark.util.newgraph.Graph" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAModel::deletingObject(sandmark.program.Object, sandmark.program.Object):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.CallingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::mSrcEdge:sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::mSrcEdge:sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Adapter" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator" />
+			<role name="adaptee" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::mSrcEdge:sandmark.analysis.controlflowgraph.Edge" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::addPhantomCall(sandmark.analysis.controlflowgraph.MethodCFG, sandmark.analysis.controlflowgraph.Edge, sandmark.analysis.controlflowgraph.MethodCFG):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.decision.Strategy" />
+			<role name="Adapter" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="adaptee" element="sandmark.wizard.quickprotect.CustomQuickProtect::mStrategy:sandmark.wizard.decision.Strategy" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.Model" />
+			<role name="Adapter" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="adaptee" element="sandmark.wizard.quickprotect.CustomQuickProtect::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::filter(sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::filter(sandmark.wizard.ObjectProvider):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.Model" />
+			<role name="Adapter" element="sandmark.wizard.decision.priority.MaxPriorityStrategy" />
+			<role name="adaptee" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::init(sandmark.wizard.modeling.Model, sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner):void" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::modelChanged():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.LabeledEdge" />
+			<role name="Adapter" element="sandmark.watermark.ct.encode.ir.AddEdge" />
+			<role name="adaptee" element="sandmark.watermark.ct.encode.ir.AddEdge::edge:sandmark.util.newgraph.LabeledEdge" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.AddEdge::getFieldName():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.util.newgraph.LabeledEdge" />
+			<role name="Adapter" element="sandmark.watermark.ct.encode.ir.FollowLink" />
+			<role name="adaptee" element="sandmark.watermark.ct.encode.ir.FollowLink::edge:sandmark.util.newgraph.LabeledEdge" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.FollowLink::getFieldName():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.evaluation.Evaluator" />
+			<role name="Adapter" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="adaptee" element="sandmark.wizard.quickprotect.CustomQuickProtect::mEvaluator:sandmark.wizard.evaluation.Evaluator" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.ChoiceRunner" />
+			<role name="Adapter" element="sandmark.wizard.decision.AllAlgsOnce" />
+			<role name="adaptee" element="sandmark.wizard.decision.AllAlgsOnce::mRunner:sandmark.wizard.ChoiceRunner" />
+			<role name="Request()" element="sandmark.wizard.decision.AllAlgsOnce::step():boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.ChoiceRunner" />
+			<role name="Adapter" element="sandmark.wizard.decision.priority.MaxPriorityStrategy" />
+			<role name="adaptee" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::mRunner:sandmark.wizard.ChoiceRunner" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::step():boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.gui.StringPropertyInfo$Widget" />
+			<role name="Adapter" element="sandmark.gui.StringPropertyInfo" />
+			<role name="adaptee" element="sandmark.gui.StringPropertyInfo::mWidget:sandmark.gui.StringPropertyInfo$Widget" />
+			<role name="Request()" element="sandmark.gui.StringPropertyInfo::getValue():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.newgraph.Graph$PredIterator" />
+			<role name="Adaptee" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="adaptee" element="sandmark.util.newgraph.Graph$PredIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$PredIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="sandmark.util.newgraph.Graph$SuccIterator" />
+			<role name="Adaptee" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="adaptee" element="sandmark.util.newgraph.Graph$SuccIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$SuccIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.modeling.Model" />
+			<role name="Adapter" element="sandmark.wizard.decision.AllAlgsOnce" />
+			<role name="adaptee" element="sandmark.wizard.decision.AllAlgsOnce::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.decision.AllAlgsOnce::step():boolean" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.evaluation.Evaluator" />
+			<role name="Adapter" element="sandmark.wizard.decision.priority.MaxPriorityStrategy" />
+			<role name="adaptee" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::mEvaluator:sandmark.wizard.evaluation.Evaluator" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::init(sandmark.wizard.modeling.Model, sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner):void" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::choicesAdded(sandmark.wizard.modeling.Choice[]):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.eclipse.StringPropertyInfo$Widget" />
+			<role name="Adapter" element="sandmark.eclipse.StringPropertyInfo" />
+			<role name="adaptee" element="sandmark.eclipse.StringPropertyInfo::mWidget:sandmark.eclipse.StringPropertyInfo$Widget" />
+			<role name="Request()" element="sandmark.eclipse.StringPropertyInfo::getValue():java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="Adapter" element="sandmark.watermark.ct.encode.ir.CreateStorage" />
+			<role name="adaptee" element="sandmark.watermark.ct.encode.ir.CreateStorage::storageClass:sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.CreateStorage::name():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.watermark.util.BasicBlockMarker" />
+			<role name="Adapter" element="sandmark.watermark.util.EveryBlockMarker" />
+			<role name="adaptee" element="sandmark.watermark.util.EveryBlockMarker::marker:sandmark.watermark.util.BasicBlockMarker" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::embed(sandmark.program.Method, java.math.BigInteger):void" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::recognize(sandmark.program.Method):java.util.Iterator" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::getCapacity(sandmark.program.Method):int" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="sandmark.wizard.AlgorithmProvider" />
+			<role name="Adapter" element="sandmark.wizard.modeling.set.SetModel" />
+			<role name="adaptee" element="sandmark.wizard.modeling.set.SetModel::mAlgProvider:sandmark.wizard.AlgorithmProvider" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::addedObject(sandmark.program.Object, sandmark.program.Object):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::copiedObject(sandmark.program.Object, sandmark.program.Object, sandmark.program.Object):void" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator">
+		<instance>
+			<role name="Component" element="sandmark.util.javagen.Expression" />
+			<role name="Decorator" element="sandmark.util.javagen.Cast" />
+			<role name="component" element="sandmark.util.javagen.Cast::expr:sandmark.util.javagen.Expression" />
+			<role name="Operation()" element="sandmark.util.javagen.Cast::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Operation()" element="sandmark.util.javagen.Cast::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.javagen.Expression" />
+			<role name="Decorator" element="sandmark.util.javagen.CondNotNullExpr" />
+			<role name="component" element="sandmark.util.javagen.CondNotNullExpr::cond:sandmark.util.javagen.Expression" />
+			<role name="component" element="sandmark.util.javagen.CondNotNullExpr::expr1:sandmark.util.javagen.Expression" />
+			<role name="component" element="sandmark.util.javagen.CondNotNullExpr::expr2:sandmark.util.javagen.Expression" />
+			<role name="Operation()" element="sandmark.util.javagen.CondNotNullExpr::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Operation()" element="sandmark.util.javagen.CondNotNullExpr::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.javagen.Expression" />
+			<role name="Decorator" element="sandmark.util.javagen.FieldRef" />
+			<role name="component" element="sandmark.util.javagen.FieldRef::left:sandmark.util.javagen.Expression" />
+			<role name="Operation()" element="sandmark.util.javagen.FieldRef::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Operation()" element="sandmark.util.javagen.FieldRef::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.javagen.Expression" />
+			<role name="Decorator" element="sandmark.util.javagen.LoadIndex" />
+			<role name="component" element="sandmark.util.javagen.LoadIndex::array:sandmark.util.javagen.Expression" />
+			<role name="component" element="sandmark.util.javagen.LoadIndex::idx:sandmark.util.javagen.Expression" />
+			<role name="Operation()" element="sandmark.util.javagen.LoadIndex::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Operation()" element="sandmark.util.javagen.LoadIndex::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.javagen.Expression" />
+			<role name="Decorator" element="sandmark.util.javagen.VirtualFunCall" />
+			<role name="component" element="sandmark.util.javagen.VirtualFunCall::obj:sandmark.util.javagen.Expression" />
+			<role name="Operation()" element="sandmark.util.javagen.VirtualFunCall::toByteCode(org.apache.bcel.generic.ClassGen, org.apache.bcel.generic.MethodGen):void" />
+			<role name="Operation()" element="sandmark.util.javagen.VirtualFunCall::toCode(sandmark.program.Class, sandmark.program.Method):void" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.Graph" />
+			<role name="Decorator" element="sandmark.util.newgraph.RecursiveGraph" />
+			<role name="component" element="sandmark.util.newgraph.RecursiveGraph::g:sandmark.util.newgraph.Graph" />
+			<role name="component" element="sandmark.util.newgraph.RecursiveGraph::consolidated:sandmark.util.newgraph.Graph" />
+			<role name="Operation()" element="sandmark.util.newgraph.RecursiveGraph::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.DoubleNodeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.DoubleNodeWrapperIterator::inner:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.DoubleNodeWrapperIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.ExtraNodeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.ExtraNodeWrapperIterator::i:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.ExtraNodeWrapperIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.Graph$4" />
+			<role name="component" element="sandmark.util.newgraph.Graph$4::i:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.Graph$4::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.Graph$5" />
+			<role name="component" element="sandmark.util.newgraph.Graph$5::i:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.Graph$5::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.MissingNodeGraph$1" />
+			<role name="component" element="sandmark.util.newgraph.MissingNodeGraph$1::i:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.MissingNodeGraph$1::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.MissingStuffGraph$MissingNodeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.MissingStuffGraph$MissingNodeWrapperIterator::i:sandmark.util.newgraph.NodeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.MissingStuffGraph$MissingNodeWrapperIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.DoubleEdgeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.DoubleEdgeWrapperIterator::a:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.DoubleEdgeWrapperIterator::b:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.DoubleEdgeWrapperIterator::getNext():sandmark.util.newgraph.EdgeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.ExtraEdgeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.ExtraEdgeWrapperIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.ExtraEdgeWrapperIterator::getNext():sandmark.util.newgraph.EdgeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.MissingEdgeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.MissingEdgeWrapperIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.MissingEdgeWrapperIterator::getNext():sandmark.util.newgraph.EdgeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.MissingStuffGraph$MissingEdgeWrapperIterator" />
+			<role name="component" element="sandmark.util.newgraph.MissingStuffGraph$MissingEdgeWrapperIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.MissingStuffGraph$MissingEdgeWrapperIterator::getNext():sandmark.util.newgraph.EdgeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Decorator" element="sandmark.util.newgraph.ReversedGraph$ReversedEdgeIterator" />
+			<role name="component" element="sandmark.util.newgraph.ReversedGraph$ReversedEdgeIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Operation()" element="sandmark.util.newgraph.ReversedGraph$ReversedEdgeIterator::getNext():sandmark.util.newgraph.EdgeWrapper" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Decorator" element="sandmark.analysis.stacksimulator.ClearStackContext" />
+			<role name="component" element="sandmark.analysis.stacksimulator.ClearStackContext::c:sandmark.analysis.stacksimulator.Context" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ClearStackContext::getLocalVariableCount():int" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ClearStackContext::getLocalVariableAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ClearStackContext::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Decorator" element="sandmark.analysis.stacksimulator.PopContext" />
+			<role name="component" element="sandmark.analysis.stacksimulator.PopContext::c:sandmark.analysis.stacksimulator.Context" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PopContext::getLocalVariableCount():int" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PopContext::getStackAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PopContext::getLocalVariableAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PopContext::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Decorator" element="sandmark.analysis.stacksimulator.PushContext" />
+			<role name="component" element="sandmark.analysis.stacksimulator.PushContext::c:sandmark.analysis.stacksimulator.Context" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PushContext::getLocalVariableCount():int" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PushContext::getStackAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PushContext::getLocalVariableAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.PushContext::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Decorator" element="sandmark.analysis.stacksimulator.ReplaceStackContext" />
+			<role name="component" element="sandmark.analysis.stacksimulator.ReplaceStackContext::c:sandmark.analysis.stacksimulator.Context" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceStackContext::getLocalVariableCount():int" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceStackContext::getStackAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceStackContext::getLocalVariableAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceStackContext::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Decorator" element="sandmark.analysis.stacksimulator.ReplaceVarContext" />
+			<role name="component" element="sandmark.analysis.stacksimulator.ReplaceVarContext::c:sandmark.analysis.stacksimulator.Context" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceVarContext::getStackSize():int" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceVarContext::getStackAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceVarContext::getLocalVariableAt(int):sandmark.analysis.stacksimulator.StackData[]" />
+			<role name="Operation()" element="sandmark.analysis.stacksimulator.ReplaceVarContext::depth():int" />
+		</instance>
+		<instance>
+			<role name="Component" element="sandmark.util.newgraph.codec.GraphCodec" />
+			<role name="Decorator" element="sandmark.util.newgraph.codec.CycleAndPathWrapper" />
+			<role name="component" element="sandmark.util.newgraph.codec.CycleAndPathWrapper::mCodec:sandmark.util.newgraph.codec.GraphCodec" />
+			<role name="Operation()" element="sandmark.util.newgraph.codec.CycleAndPathWrapper::maxOutDegree():int" />
+			<role name="Operation()" element="sandmark.util.newgraph.codec.CycleAndPathWrapper::encode(java.math.BigInteger, sandmark.util.newgraph.NodeFactory):sandmark.util.newgraph.Graph" />
+			<role name="Operation()" element="sandmark.util.newgraph.codec.CycleAndPathWrapper::decode(sandmark.util.newgraph.Graph):java.math.BigInteger" />
+		</instance>
+	</pattern>
+	<pattern name="Observer">
+		<instance>
+			<role name="Observer" element="sandmark.program.PathChangeListener" />
+			<role name="Subject" element="sandmark.program.Application" />
+			<role name="Notify()" element="sandmark.program.Application::setPath(java.io.File):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="sandmark.util.ConfigPropertyChangeListener" />
+			<role name="Subject" element="sandmark.util.ConfigProperties$PropSpec" />
+			<role name="Notify()" element="sandmark.util.ConfigProperties$PropSpec::setValue(java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Observer" element="sandmark.eclipse.ConfigPropertyPanel$ChangeListener" />
+			<role name="Subject" element="sandmark.eclipse.ConfigPropertyPanel" />
+			<role name="Notify()" element="sandmark.eclipse.ConfigPropertyPanel::modifyText(org.eclipse.swt.events.ModifyEvent):void" />
+		</instance>
+	</pattern>
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="sandmark.gui.AlgorithmComboBox" />
+			<role name="State" element="sandmark.gui.AlgorithmComboBox$DescriptionListener" />
+			<role name="state" element="sandmark.gui.AlgorithmComboBox::mListener:sandmark.gui.AlgorithmComboBox$DescriptionListener" />
+			<role name="Request()" element="sandmark.gui.AlgorithmComboBox::popupMenuWillBecomeInvisible(javax.swing.event.PopupMenuEvent):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.gui.diff.DiffFrame" />
+			<role name="State" element="sandmark.diff.DiffAlgorithm" />
+			<role name="state" element="sandmark.gui.diff.DiffFrame::algorithm:sandmark.diff.DiffAlgorithm" />
+			<role name="Request()" element="sandmark.gui.diff.DiffFrame::makeComponents():void" />
+			<role name="Request()" element="sandmark.gui.diff.DiffFrame::color(sandmark.diff.Result):void" />
+			<role name="Request()" element="sandmark.gui.diff.DiffFrame::diff():void" />
+			<role name="Request()" element="sandmark.gui.diff.DiffFrame::showResults():void" />
+		</instance>
+		<instance>
+			<role name="State" element="sandmark.util.newgraph.Graph" />
+			<role name="Context" element="sandmark.watermark.ct.recognize.Recognizer$Graphs" />
+			<role name="state" element="sandmark.watermark.ct.recognize.Recognizer$Graphs::graph:sandmark.util.newgraph.Graph" />
+			<role name="Request()" element="sandmark.watermark.ct.recognize.Recognizer$Graphs::get():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.util.newgraph.MutableGraph" />
+			<role name="State" element="sandmark.util.newgraph.Graph" />
+			<role name="state" element="sandmark.util.newgraph.MutableGraph::g:sandmark.util.newgraph.Graph" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::consolidate():void" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::depth():int" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::hasNode(java.lang.Object):boolean" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::hasEdge(sandmark.util.newgraph.Edge):boolean" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::nodeCount():int" />
+			<role name="Request()" element="sandmark.util.newgraph.MutableGraph::edgeCount():int" />
+		</instance>
+		<instance>
+			<role name="State" element="sandmark.util.newgraph.Graph" />
+			<role name="Context" element="sandmark.util.newgraph.Graph$DepthFirstIterator" />
+			<role name="state" element="sandmark.util.newgraph.Graph$DepthFirstIterator::g:sandmark.util.newgraph.Graph" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$DepthFirstIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.gui.MetricTableModel" />
+			<role name="State" element="sandmark.metric.Metric" />
+			<role name="state" element="sandmark.gui.MetricTableModel::mMetrics:sandmark.metric.Metric[]" />
+			<role name="Request()" element="sandmark.gui.MetricTableModel::getValueAt(int, int):java.lang.Object" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.ct.recognize.Recognizer$Watermarks" />
+			<role name="State" element="sandmark.util.newgraph.codec.GraphCodec" />
+			<role name="state" element="sandmark.watermark.ct.recognize.Recognizer$Watermarks::currentCodec:sandmark.util.newgraph.codec.GraphCodec" />
+			<role name="Request()" element="sandmark.watermark.ct.recognize.Recognizer$Watermarks::getNextTriple():boolean" />
+		</instance>
+		<instance>
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Context" element="sandmark.util.exprtree.ExprTree" />
+			<role name="state" element="sandmark.util.exprtree.ExprTree::cn:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.util.exprtree.ExprTree::add(int):void" />
+			<role name="Request()" element="sandmark.util.exprtree.ExprTree::doStack(org.apache.bcel.generic.InstructionHandle):void" />
+		</instance>
+		<instance>
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="Context" element="sandmark.util.newexprtree.ComputeExprTree" />
+			<role name="state" element="sandmark.util.newexprtree.ComputeExprTree::cn:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.util.newexprtree.ComputeExprTree::add(int):void" />
+			<role name="Request()" element="sandmark.util.newexprtree.ComputeExprTree::doStack(org.apache.bcel.generic.InstructionHandle):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.obfuscate.boolsplitter.BoolSplitter" />
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="state" element="sandmark.obfuscate.boolsplitter.BoolSplitter::cn:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.obfuscate.boolsplitter.BoolSplitter::replBoolArrays():void" />
+			<role name="Request()" element="sandmark.obfuscate.boolsplitter.BoolSplitter::detectBoolVariables():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.ct.trace.callforest.Build" />
+			<role name="State" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="state" element="sandmark.watermark.ct.trace.callforest.Build::storageClasses:sandmark.watermark.ct.encode.storage.StorageClass[]" />
+			<role name="Request()" element="sandmark.watermark.ct.trace.callforest.Build::okToAddStorageArgument(sandmark.util.MethodID):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.ct.trace.callforest.Decorate" />
+			<role name="State" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="state" element="sandmark.watermark.ct.trace.callforest.Decorate::storageClasses:sandmark.watermark.ct.encode.storage.StorageClass[]" />
+			<role name="Request()" element="sandmark.watermark.ct.trace.callforest.Decorate::okToAddStorageArgument(sandmark.util.MethodID):boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.ct.encode.storage.NodeStorage" />
+			<role name="State" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="state" element="sandmark.watermark.ct.encode.storage.NodeStorage::storage:sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.storage.NodeStorage::toJavaStore(sandmark.util.ConfigProperties):sandmark.util.javagen.Statement" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.storage.NodeStorage::toJavaLoad(sandmark.util.ConfigProperties):sandmark.util.javagen.Statement" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.modeling.dfa.DFAEdge" />
+			<role name="State" element="sandmark.Algorithm" />
+			<role name="state" element="sandmark.wizard.modeling.dfa.DFAEdge::myAlg:sandmark.Algorithm" />
+			<role name="Request()" element="sandmark.wizard.modeling.dfa.DFAEdge::getCharKey():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="State" element="sandmark.wizard.modeling.Model" />
+			<role name="state" element="sandmark.wizard.quickprotect.CustomQuickProtect::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::filter(sandmark.wizard.AlgorithmProvider):void" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::filter(sandmark.wizard.ObjectProvider):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.decision.priority.MaxPriorityStrategy" />
+			<role name="State" element="sandmark.wizard.modeling.Model" />
+			<role name="state" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::init(sandmark.wizard.modeling.Model, sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner):void" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::modelChanged():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.util.classloading.ClassFinder" />
+			<role name="State" element="sandmark.util.classloading.IClassFinder" />
+			<role name="state" element="sandmark.util.classloading.ClassFinder::sListGen:sandmark.util.classloading.IClassFinder" />
+			<role name="Request()" element="sandmark.util.classloading.ClassFinder::getClassesWithAncestor(int):java.util.Collection" />
+			<role name="Request()" element="sandmark.util.classloading.ClassFinder::getClassShortname(java.lang.String):java.lang.String" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="State" element="sandmark.wizard.evaluation.Evaluator" />
+			<role name="state" element="sandmark.wizard.quickprotect.CustomQuickProtect::mEvaluator:sandmark.wizard.evaluation.Evaluator" />
+			<role name="Request()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.analysis.controlflowgraph.CallingCallGenerator" />
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="state" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::mSrcEdgeCx:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::buildCallBlock():void" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.CallingCallGenerator::buildRestoreAndGotoBlock():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator" />
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="state" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::mSrcEdgeCx:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::buildCallBlock():void" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.NullNENullCallGenerator::buildRestoreAndGotoBlock():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator" />
+			<role name="State" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="state" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::mSrcEdgeCx:sandmark.analysis.stacksimulator.Context" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::generateCall(java.util.ArrayList):void" />
+			<role name="Request()" element="sandmark.analysis.controlflowgraph.TopoMaintainingCallGenerator::generateRestore(java.util.ArrayList):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.gui.StringPropertyInfo" />
+			<role name="State" element="sandmark.gui.StringPropertyInfo$Widget" />
+			<role name="state" element="sandmark.gui.StringPropertyInfo::mWidget:sandmark.gui.StringPropertyInfo$Widget" />
+			<role name="Request()" element="sandmark.gui.StringPropertyInfo::getValue():java.lang.Object" />
+			<role name="Request()" element="sandmark.gui.StringPropertyInfo::propertyChanged(sandmark.util.ConfigProperties, java.lang.String, java.lang.Object, java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.util.newgraph.Graph$PredIterator" />
+			<role name="State" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="state" element="sandmark.util.newgraph.Graph$PredIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$PredIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.util.newgraph.Graph$SuccIterator" />
+			<role name="State" element="sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="state" element="sandmark.util.newgraph.Graph$SuccIterator::i:sandmark.util.newgraph.EdgeWrapperIterator" />
+			<role name="Request()" element="sandmark.util.newgraph.Graph$SuccIterator::getNext():sandmark.util.newgraph.NodeWrapper" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.decision.AllAlgsOnce" />
+			<role name="State" element="sandmark.wizard.modeling.Model" />
+			<role name="state" element="sandmark.wizard.decision.AllAlgsOnce::mModel:sandmark.wizard.modeling.Model" />
+			<role name="Request()" element="sandmark.wizard.decision.AllAlgsOnce::step():boolean" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.decision.priority.MaxPriorityStrategy" />
+			<role name="State" element="sandmark.wizard.evaluation.Evaluator" />
+			<role name="state" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::mEvaluator:sandmark.wizard.evaluation.Evaluator" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::init(sandmark.wizard.modeling.Model, sandmark.wizard.evaluation.Evaluator, sandmark.wizard.ChoiceRunner):void" />
+			<role name="Request()" element="sandmark.wizard.decision.priority.MaxPriorityStrategy::choicesAdded(sandmark.wizard.modeling.Choice[]):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.eclipse.StringPropertyInfo" />
+			<role name="State" element="sandmark.eclipse.StringPropertyInfo$Widget" />
+			<role name="state" element="sandmark.eclipse.StringPropertyInfo::mWidget:sandmark.eclipse.StringPropertyInfo$Widget" />
+			<role name="Request()" element="sandmark.eclipse.StringPropertyInfo::getValue():java.lang.Object" />
+			<role name="Request()" element="sandmark.eclipse.StringPropertyInfo::propertyChanged(sandmark.util.ConfigProperties, java.lang.String, java.lang.Object, java.lang.Object):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.util.graph.graphview.GraphPanel" />
+			<role name="State" element="sandmark.util.newgraph.Style" />
+			<role name="state" element="sandmark.util.graph.graphview.GraphPanel::myGraphStyle:sandmark.util.newgraph.Style" />
+			<role name="Request()" element="sandmark.util.graph.graphview.GraphPanel::drawNode(java.awt.Graphics2D, sandmark.util.graph.graphview.NodeDisplayInfo):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.ct.encode.ir.CreateStorage" />
+			<role name="State" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="state" element="sandmark.watermark.ct.encode.ir.CreateStorage::storageClass:sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.CreateStorage::name():java.lang.String" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.CreateStorage::type():java.lang.String" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.CreateStorage::varName():java.lang.String" />
+			<role name="Request()" element="sandmark.watermark.ct.encode.ir.CreateStorage::toJava(sandmark.util.ConfigProperties):sandmark.util.javagen.Java" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.watermark.util.EveryBlockMarker" />
+			<role name="State" element="sandmark.watermark.util.BasicBlockMarker" />
+			<role name="state" element="sandmark.watermark.util.EveryBlockMarker::marker:sandmark.watermark.util.BasicBlockMarker" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::embed(sandmark.program.Method, java.math.BigInteger):void" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::recognize(sandmark.program.Method):java.util.Iterator" />
+			<role name="Request()" element="sandmark.watermark.util.EveryBlockMarker::getCapacity(sandmark.program.Method):int" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.modeling.lazydfa.LazyDFA" />
+			<role name="State" element="sandmark.wizard.AlgorithmProvider" />
+			<role name="state" element="sandmark.wizard.modeling.lazydfa.LazyDFA::mAlgProvider:sandmark.wizard.AlgorithmProvider" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFA::getEdgeList(sandmark.wizard.modeling.lazydfa.LazyDFANode):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.gui.Utils$LabeledSlider" />
+			<role name="State" element="sandmark.gui.Utils$LabeledSlider$ValueMapper" />
+			<role name="state" element="sandmark.gui.Utils$LabeledSlider::m_mapper:sandmark.gui.Utils$LabeledSlider$ValueMapper" />
+			<role name="Request()" element="sandmark.gui.Utils$LabeledSlider::stateChanged(javax.swing.event.ChangeEvent):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.modeling.set.SetModel" />
+			<role name="State" element="sandmark.wizard.AlgorithmProvider" />
+			<role name="state" element="sandmark.wizard.modeling.set.SetModel::mAlgProvider:sandmark.wizard.AlgorithmProvider" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::addedObject(sandmark.program.Object, sandmark.program.Object):void" />
+			<role name="Request()" element="sandmark.wizard.modeling.set.SetModel::copiedObject(sandmark.program.Object, sandmark.program.Object, sandmark.program.Object):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.wizard.modeling.lazydfa.LazyDFA" />
+			<role name="State" element="sandmark.wizard.ObjectProvider" />
+			<role name="state" element="sandmark.wizard.modeling.lazydfa.LazyDFA::mObjProvider:sandmark.wizard.ObjectProvider" />
+			<role name="Request()" element="sandmark.wizard.modeling.lazydfa.LazyDFA::getEdgeList(sandmark.wizard.modeling.lazydfa.LazyDFANode):java.util.List" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.eclipse.SandMarkConfigTab" />
+			<role name="State" element="sandmark.Algorithm" />
+			<role name="state" element="sandmark.eclipse.SandMarkConfigTab::sAlgs:sandmark.Algorithm[]" />
+			<role name="Request()" element="sandmark.eclipse.SandMarkConfigTab::getAlgNames():java.lang.String[]" />
+			<role name="Request()" element="sandmark.eclipse.SandMarkConfigTab::initializeFrom(org.eclipse.debug.core.ILaunchConfiguration):void" />
+			<role name="Request()" element="sandmark.eclipse.SandMarkConfigTab::performApply(org.eclipse.debug.core.ILaunchConfigurationWorkingCopy):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="sandmark.gui.QuickProtectPanel" />
+			<role name="State" element="sandmark.wizard.quickprotect.QuickProtect" />
+			<role name="state" element="sandmark.gui.QuickProtectPanel::quickProtect:sandmark.wizard.quickprotect.QuickProtect" />
+			<role name="Request()" element="sandmark.gui.QuickProtectPanel::setQuickProtect(sandmark.wizard.quickprotect.QuickProtect):void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy">
+		<instance>
+			<role name="Context" element="sandmark.wizard.quickprotect.CustomQuickProtect" />
+			<role name="Strategy" element="sandmark.wizard.decision.Strategy" />
+			<role name="strategy" element="sandmark.wizard.quickprotect.CustomQuickProtect::mStrategy:sandmark.wizard.decision.Strategy" />
+			<role name="ContextInterface()" element="sandmark.wizard.quickprotect.CustomQuickProtect::run(sandmark.wizard.AlgorithmProvider, sandmark.wizard.ObjectProvider):void" />
+		</instance>
+	</pattern>
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="sandmark.util.splitint.CRTSplitter" />
+			<role name="Implementor" element="sandmark.util.newgraph.Graph" />
+			<role name="implementor" element="sandmark.util.splitint.CRTSplitter::splittingGraph:sandmark.util.newgraph.Graph" />
+			<role name="Operation()" element="sandmark.util.splitint.CRTSplitter::split(java.math.BigInteger):java.math.BigInteger[]" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="sandmark.gui.PropertyInfo" />
+			<role name="TemplateMethod()" element="sandmark.gui.PropertyInfo::updateProperty():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.program.Class" />
+			<role name="TemplateMethod()" element="sandmark.program.Class::setConstantPool(org.apache.bcel.classfile.ConstantPool):org.apache.bcel.generic.ConstantPoolGen" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.Algorithm" />
+			<role name="TemplateMethod()" element="sandmark.Algorithm::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.splitint.CRTSplitter" />
+			<role name="TemplateMethod()" element="sandmark.util.splitint.CRTSplitter::combineRes(java.math.BigInteger[]):java.math.BigInteger[]" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.splitint.ResidueSplitter" />
+			<role name="TemplateMethod()" element="sandmark.util.splitint.ResidueSplitter::combine(java.math.BigInteger[]):java.math.BigInteger" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.splitint.ValueSplitter" />
+			<role name="TemplateMethod()" element="sandmark.util.splitint.ValueSplitter::testSplitter(sandmark.util.splitint.ValueSplitter, int, boolean):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.MethodSignatureChanger" />
+			<role name="TemplateMethod()" element="sandmark.util.MethodSignatureChanger::apply(sandmark.program.Method):boolean" />
+			<role name="TemplateMethod()" element="sandmark.util.MethodSignatureChanger::fixMethodImplementations(java.util.Set):void" />
+			<role name="TemplateMethod()" element="sandmark.util.MethodSignatureChanger::fixInvokations(sandmark.program.Method, java.util.Set):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.newgraph.MissingGraph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.MissingGraph::missingConsolidate(int):sandmark.util.newgraph.Graph" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.newgraph.codec.CycleAndDigitsCodec" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.codec.CycleAndDigitsCodec::encode(java.math.BigInteger, sandmark.util.newgraph.NodeFactory):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.codec.CycleAndDigitsCodec::decode(sandmark.util.newgraph.Graph):java.math.BigInteger" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::addNode(java.lang.Object):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::checkDepth(sandmark.util.newgraph.Graph):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::removeNode(java.lang.Object):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::_removeNode(sandmark.util.newgraph.NodeWrapper, boolean):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::addEdge(sandmark.util.newgraph.Edge):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::removeEdge(sandmark.util.newgraph.Edge):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::removeUnreachable(java.lang.Object):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::reachable(sandmark.util.newgraph.NodeWrapper, int):void" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::inEdges(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::outEdges(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::succs(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::preds(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::inDegree(java.lang.Object):int" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::outDegree(java.lang.Object):int" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::nodes():java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::edges():java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::depthFirst(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::postOrder(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::breadthFirst(java.lang.Object):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::depthFirstTree(java.lang.Object):sandmark.util.newgraph.Graph" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::reachable(java.lang.Object, java.lang.Object):boolean" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::acyclicOrder(java.lang.Object):java.util.List" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::acyclicHamiltonianPath(java.lang.Object):java.util.List" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::acyclicOrder(sandmark.util.newgraph.NodeWrapper):java.util.List" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::acyclicHamiltonianPath(sandmark.util.newgraph.NodeWrapper):java.util.List" />
+			<role name="TemplateMethod()" element="sandmark.util.newgraph.Graph::dominatorTree(java.lang.Object):sandmark.util.newgraph.DomTree" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.util.MultiIter" />
+			<role name="TemplateMethod()" element="sandmark.util.MultiIter::init():void" />
+			<role name="TemplateMethod()" element="sandmark.util.MultiIter::genNext():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.eclipse.PropertyInfo" />
+			<role name="TemplateMethod()" element="sandmark.eclipse.PropertyInfo::updateProperty():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.util.BasicBlockMarker" />
+			<role name="TemplateMethod()" element="sandmark.watermark.util.BasicBlockMarker::embed(sandmark.analysis.controlflowgraph.BasicBlock, long):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.util.MethodMarker" />
+			<role name="TemplateMethod()" element="sandmark.watermark.util.MethodMarker::embed(sandmark.program.Method, long):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.util.StaticWriteParityMarker" />
+			<role name="TemplateMethod()" element="sandmark.watermark.util.StaticWriteParityMarker::recognize(sandmark.analysis.controlflowgraph.BasicBlock):java.util.Iterator" />
+			<role name="TemplateMethod()" element="sandmark.watermark.util.StaticWriteParityMarker::mark(sandmark.analysis.controlflowgraph.BasicBlock, int):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.ct.encode.ir.Method" />
+			<role name="TemplateMethod()" element="sandmark.watermark.ct.encode.ir.Method::toJava(sandmark.util.ConfigProperties):sandmark.util.javagen.Java" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.ct.encode.storage.StorageClass" />
+			<role name="TemplateMethod()" element="sandmark.watermark.ct.encode.storage.StorageClass::toJavaFormal(sandmark.util.newgraph.MutableGraph, sandmark.util.ConfigProperties):sandmark.util.javagen.Java" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.watermark.gtw.ClusterGraph" />
+			<role name="TemplateMethod()" element="sandmark.watermark.gtw.ClusterGraph::randomlyWalkAddingEdges(java.util.ArrayList, java.util.ArrayList, int):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.diff.DiffAlgorithm" />
+			<role name="TemplateMethod()" element="sandmark.diff.DiffAlgorithm::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.diff.methoddiff.MethodDiffAlgorithm" />
+			<role name="TemplateMethod()" element="sandmark.diff.methoddiff.MethodDiffAlgorithm::runHelper(java.util.Vector):void" />
+			<role name="TemplateMethod()" element="sandmark.diff.methoddiff.MethodDiffAlgorithm::diff(sandmark.program.Object, sandmark.program.Object):sandmark.diff.Result" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.diff.classdiff.ClassDiffAlgorithm" />
+			<role name="TemplateMethod()" element="sandmark.diff.classdiff.ClassDiffAlgorithm::runHelper(java.util.Vector):void" />
+			<role name="TemplateMethod()" element="sandmark.diff.classdiff.ClassDiffAlgorithm::diff(sandmark.program.Object, sandmark.program.Object):sandmark.diff.Result" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.metric.ApplicationMetric" />
+			<role name="TemplateMethod()" element="sandmark.metric.ApplicationMetric::getMeasure(sandmark.program.Application):int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.metric.Metric" />
+			<role name="TemplateMethod()" element="sandmark.metric.Metric::normalizeByScaling(float):float" />
+			<role name="TemplateMethod()" element="sandmark.metric.Metric::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.metric.MethodMetric" />
+			<role name="TemplateMethod()" element="sandmark.metric.MethodMetric::getMeasure(sandmark.program.Method):int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.metric.ClassMetric" />
+			<role name="TemplateMethod()" element="sandmark.metric.ClassMetric::getMeasure(sandmark.program.Class):int" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.analysis.stacksimulator.Context" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.Context::initializeTop(org.apache.bcel.generic.InstructionHandle):sandmark.analysis.stacksimulator.Context" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.Context::maybeConsolidate(sandmark.analysis.stacksimulator.Context):sandmark.analysis.stacksimulator.Context" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.Context::consolidate():sandmark.analysis.stacksimulator.Context" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.Context::isSubcontextOf(sandmark.analysis.stacksimulator.Context):boolean" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.Context::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.analysis.stacksimulator.StackData" />
+			<role name="TemplateMethod()" element="sandmark.analysis.stacksimulator.StackData::toString():java.lang.String" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.analysis.controlflowgraph.ControlFlowSynthesizer" />
+			<role name="TemplateMethod()" element="sandmark.analysis.controlflowgraph.ControlFlowSynthesizer::generate(sandmark.util.newgraph.Graph, sandmark.program.Class):sandmark.program.Method" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="sandmark.birthmark.wpp.symbol" />
+			<role name="TemplateMethod()" element="sandmark.birthmark.wpp.symbol::substitute(sandmark.birthmark.wpp.rule):void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility">
+		<instance>
+			<role name="Handler" element="sandmark.program.Object" />
+			<role name="successor" element="sandmark.program.Object::parent:sandmark.program.Object" />
+		</instance>
+		<instance>
+			<role name="Handler" element="sandmark.birthmark.wpp.symbol" />
+			<role name="successor" element="sandmark.birthmark.wpp.symbol::p:sandmark.birthmark.wpp.symbol" />
+			<role name="successor" element="sandmark.birthmark.wpp.symbol::n:sandmark.birthmark.wpp.symbol" />
+		</instance>
+	</pattern>
+</system>
+

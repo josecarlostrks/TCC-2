@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system>
+	<pattern name="Factory Method">
+		<instance>
+			<role name="Creator" element="net.wastl.webmail.server.URLHandler" />
+			<role name="FactoryMethod()" element="net.wastl.webmail.server.URLHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Creator" element="net.wastl.webmail.server.UserData" />
+			<role name="FactoryMethod()" element="net.wastl.webmail.server.UserData::getMailHost(java.lang.String):net.wastl.webmail.server.MailHostData" />
+		</instance>
+	</pattern>
+	<pattern name="Prototype" />
+	<pattern name="Singleton">
+		<instance>
+			<role name="Singleton" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="uniqueInstance" element="net.wastl.webmail.server.WebMailServer::server:net.wastl.webmail.server.WebMailServer" />
+		</instance>
+	</pattern>
+	<pattern name="(Object)Adapter">
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="About" />
+			<role name="adaptee" element="About::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="About::register(net.wastl.webmail.server.WebMailServer):void" />
+			<role name="Request()" element="About::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="AdminPlugin" />
+			<role name="adaptee" element="AdminPlugin::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="AdminPlugin::register(net.wastl.webmail.server.WebMailServer):void" />
+			<role name="Request()" element="AdminPlugin::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="ErrorHandler" />
+			<role name="adaptee" element="ErrorHandler::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="ErrorHandler::register(net.wastl.webmail.server.WebMailServer):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="FolderList" />
+			<role name="adaptee" element="FolderList::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="FolderList::register(net.wastl.webmail.server.WebMailServer):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="ImageHandler" />
+			<role name="adaptee" element="ImageHandler::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="ImageHandler::register(net.wastl.webmail.server.WebMailServer):void" />
+			<role name="Request()" element="ImageHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="PassThroughPlugin" />
+			<role name="adaptee" element="PassThroughPlugin::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="PassThroughPlugin::register(net.wastl.webmail.server.WebMailServer):void" />
+			<role name="Request()" element="PassThroughPlugin::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="SendMessage" />
+			<role name="adaptee" element="SendMessage::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="SendMessage::register(net.wastl.webmail.server.WebMailServer):void" />
+			<role name="Request()" element="SendMessage::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="net.wastl.webmail.server.ToplevelURLHandler" />
+			<role name="adaptee" element="net.wastl.webmail.server.ToplevelURLHandler::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="net.wastl.webmail.server.ToplevelURLHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.xml.XMLUserData" />
+			<role name="Adapter" element="net.wastl.webmail.server.WebMailSession" />
+			<role name="adaptee" element="net.wastl.webmail.server.WebMailSession::user:net.wastl.webmail.xml.XMLUserData" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::logout():void" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::getLocale():java.util.Locale" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::saveData():void" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::setEnv():void" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="ChallengeHandler" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="ChallengeHandler::storage:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ChallengeHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="Composer" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="Composer::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="Composer::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="ErrorHandler" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="ErrorHandler::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ErrorHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="FileAttacher" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="FileAttacher::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FileAttacher::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="FolderList" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="FolderList::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FolderList::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="FolderSetup" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="FolderSetup::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FolderSetup::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="LogoutSession" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="LogoutSession::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="LogoutSession::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="MailboxList" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="MailboxList::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="MailboxList::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="NavBar" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="NavBar::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="NavBar::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="SendMessage" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="SendMessage::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="SendMessage::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="ShowMessage" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="ShowMessage::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ShowMessage::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="UserSetup" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="UserSetup::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="UserSetup::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="WebMailHelp" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="WebMailHelp::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="WebMailHelp::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adapter" element="WebMailTitle" />
+			<role name="Adaptee" element="net.wastl.webmail.server.Storage" />
+			<role name="adaptee" element="WebMailTitle::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="WebMailTitle::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.xml.XMLAdminModel" />
+			<role name="Adapter" element="net.wastl.webmail.server.AdminSession" />
+			<role name="adaptee" element="net.wastl.webmail.server.AdminSession::model:net.wastl.webmail.xml.XMLAdminModel" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::getEnv(java.lang.String):java.lang.String" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::setException(java.lang.Exception):void" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::setEnv(java.lang.String, java.lang.String):void" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::setEnv():void" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::getModel():org.w3c.dom.Document" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.xml.XMLUserModel" />
+			<role name="Adapter" element="net.wastl.webmail.server.WebMailSession" />
+			<role name="adaptee" element="net.wastl.webmail.server.WebMailSession::model:net.wastl.webmail.xml.XMLUserModel" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::getModel():org.w3c.dom.Document" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::setException(java.lang.Exception):void" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::setEnv():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="net.wastl.webmail.server.AdminSession" />
+			<role name="adaptee" element="net.wastl.webmail.server.AdminSession::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::logout():void" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::setEnv():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Adapter" element="net.wastl.webmail.server.WebMailSession" />
+			<role name="adaptee" element="net.wastl.webmail.server.WebMailSession::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::logout():void" />
+			<role name="Request()" element="net.wastl.webmail.server.WebMailSession::setEnv():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.WebMailServlet" />
+			<role name="Adapter" element="net.wastl.webmail.logger.ServletLogger" />
+			<role name="adaptee" element="net.wastl.webmail.logger.ServletLogger::parent:net.wastl.webmail.server.WebMailServlet" />
+			<role name="Request()" element="net.wastl.webmail.logger.ServletLogger::log(int, java.lang.String):void" />
+			<role name="Request()" element="net.wastl.webmail.logger.ServletLogger::log(int, java.lang.Exception):void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.Logger" />
+			<role name="Adapter" element="net.wastl.webmail.storage.FileStorage" />
+			<role name="adaptee" element="net.wastl.webmail.storage.FileStorage::logger:net.wastl.webmail.server.Logger" />
+			<role name="Request()" element="net.wastl.webmail.storage.FileStorage::log(int, java.lang.String):void" />
+			<role name="Request()" element="net.wastl.webmail.storage.FileStorage::log(int, java.lang.Exception):void" />
+			<role name="Request()" element="net.wastl.webmail.storage.FileStorage::shutdown():void" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.misc.ExpireableCache" />
+			<role name="Adapter" element="WebMailHelp" />
+			<role name="adaptee" element="WebMailHelp::cache:net.wastl.webmail.misc.ExpireableCache" />
+			<role name="Request()" element="WebMailHelp::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Adaptee" element="net.wastl.webmail.server.URLHandlerTree" />
+			<role name="Adapter" element="net.wastl.webmail.server.ToplevelURLHandler" />
+			<role name="adaptee" element="net.wastl.webmail.server.ToplevelURLHandler::urlhandlers:net.wastl.webmail.server.URLHandlerTree" />
+			<role name="Request()" element="net.wastl.webmail.server.ToplevelURLHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+	</pattern>
+	<pattern name="Command" />
+	<pattern name="Composite" />
+	<pattern name="Decorator" />
+	<pattern name="Observer" />
+	<pattern name="State">
+		<instance>
+			<role name="Context" element="net.wastl.webmail.server.PluginDependencyTree" />
+			<role name="State" element="net.wastl.webmail.server.Plugin" />
+			<role name="state" element="net.wastl.webmail.server.PluginDependencyTree::node:net.wastl.webmail.server.Plugin" />
+			<role name="Request()" element="net.wastl.webmail.server.PluginDependencyTree::register(net.wastl.webmail.server.WebMailServer):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="ChallengeHandler" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="ChallengeHandler::storage:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ChallengeHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="Composer" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="Composer::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="Composer::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="ErrorHandler" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="ErrorHandler::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ErrorHandler::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="FileAttacher" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="FileAttacher::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FileAttacher::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="FolderList" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="FolderList::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FolderList::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="FolderSetup" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="FolderSetup::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="FolderSetup::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="LogoutSession" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="LogoutSession::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="LogoutSession::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="MailboxList" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="MailboxList::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="MailboxList::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="NavBar" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="NavBar::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="NavBar::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="SendMessage" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="SendMessage::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="SendMessage::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="ShowMessage" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="ShowMessage::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="ShowMessage::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="UserSetup" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="UserSetup::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="UserSetup::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="WebMailHelp" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="WebMailHelp::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="WebMailHelp::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="WebMailTitle" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="WebMailTitle::store:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="WebMailTitle::handleURL(java.lang.String, net.wastl.webmail.server.HTTPSession, net.wastl.webmail.server.http.HTTPRequestHeader):net.wastl.webmail.ui.html.HTMLDocument" />
+		</instance>
+		<instance>
+			<role name="Context" element="net.wastl.webmail.server.AdminSession" />
+			<role name="State" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="state" element="net.wastl.webmail.server.AdminSession::parent:net.wastl.webmail.server.WebMailServer" />
+			<role name="Request()" element="net.wastl.webmail.server.AdminSession::setEnv():void" />
+		</instance>
+		<instance>
+			<role name="Context" element="IMAPAuthenticator" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="IMAPAuthenticator::storage:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="IMAPAuthenticator::authenticatePreUserData(java.lang.String, java.lang.String, java.lang.String):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="POPAuthenticator" />
+			<role name="State" element="net.wastl.webmail.server.Storage" />
+			<role name="state" element="POPAuthenticator::storage:net.wastl.webmail.server.Storage" />
+			<role name="Request()" element="POPAuthenticator::authenticatePreUserData(java.lang.String, java.lang.String, java.lang.String):void" />
+		</instance>
+		<instance>
+			<role name="Context" element="org.webengruven.webmail.auth.CRAuthDisplayMngr" />
+			<role name="State" element="org.webengruven.webmail.auth.CRAuthenticator" />
+			<role name="state" element="org.webengruven.webmail.auth.CRAuthDisplayMngr::auth:org.webengruven.webmail.auth.CRAuthenticator" />
+			<role name="Request()" element="org.webengruven.webmail.auth.CRAuthDisplayMngr::setChallengeScreenVars(net.wastl.webmail.server.UserData, net.wastl.webmail.xml.XMLGenericModel):void" />
+		</instance>
+	</pattern>
+	<pattern name="Strategy" />
+	<pattern name="Bridge">
+		<instance>
+			<role name="Abstraction" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="Implementor" element="net.wastl.webmail.server.Storage" />
+			<role name="implementor" element="net.wastl.webmail.server.WebMailServer::storage:net.wastl.webmail.server.Storage" />
+			<role name="Operation()" element="net.wastl.webmail.server.WebMailServer::doInit():void" />
+			<role name="Operation()" element="net.wastl.webmail.server.WebMailServer::restart():void" />
+			<role name="Operation()" element="net.wastl.webmail.server.WebMailServer::shutdown():void" />
+			<role name="Operation()" element="net.wastl.webmail.server.WebMailServer::removeSession(net.wastl.webmail.server.HTTPSession):void" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="net.wastl.webmail.storage.FileStorage" />
+			<role name="Implementor" element="net.wastl.webmail.server.Authenticator" />
+			<role name="implementor" element="net.wastl.webmail.storage.FileStorage::auth:net.wastl.webmail.server.Authenticator" />
+			<role name="Operation()" element="net.wastl.webmail.storage.FileStorage::initAuth():void" />
+		</instance>
+		<instance>
+			<role name="Abstraction" element="net.wastl.webmail.storage.FileStorage" />
+			<role name="Implementor" element="net.wastl.webmail.server.Logger" />
+			<role name="implementor" element="net.wastl.webmail.storage.FileStorage::logger:net.wastl.webmail.server.Logger" />
+			<role name="Operation()" element="net.wastl.webmail.storage.FileStorage::log(int, java.lang.String):void" />
+			<role name="Operation()" element="net.wastl.webmail.storage.FileStorage::log(int, java.lang.Exception):void" />
+			<role name="Operation()" element="net.wastl.webmail.storage.FileStorage::shutdown():void" />
+		</instance>
+	</pattern>
+	<pattern name="Template Method">
+		<instance>
+			<role name="AbstractClass" element="net.wastl.webmail.config.ConfigStore" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.config.ConfigStore::getConfig(java.lang.String):java.lang.String" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.config.ConfigStore::isConfigSet(java.lang.String):boolean" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.config.ConfigStore::setConfig(java.lang.String, java.lang.String, boolean, boolean):void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="net.wastl.webmail.server.WebMailServer" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.WebMailServer::doInit():void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.WebMailServer::restart():void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.WebMailServer::shutdown():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="net.wastl.webmail.server.Storage" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::initConfigKeys():void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::setConfig(java.lang.String, java.lang.String):void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::getUserData(java.lang.String, java.lang.String, java.lang.String):net.wastl.webmail.xml.XMLUserData" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::setUserData(java.lang.String, net.wastl.webmail.server.UserData):void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::deleteUserData(java.lang.String):void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::setVirtualDomain(java.lang.String, net.wastl.webmail.server.WebMailVirtualDomain):void" />
+			<role name="TemplateMethod()" element="net.wastl.webmail.server.Storage::save():void" />
+		</instance>
+		<instance>
+			<role name="AbstractClass" element="org.bulbul.webmail.xmlresource.ResourceBase" />
+			<role name="TemplateMethod()" element="org.bulbul.webmail.xmlresource.ResourceBase::loadXmlResourceFile():void" />
+		</instance>
+	</pattern>
+	<pattern name="Visitor" />
+	<pattern name="Proxy" />
+	<pattern name="Proxy2" />
+	<pattern name="Chain of Responsibility" />
+</system>
+
