@@ -77,8 +77,7 @@ public class AnaliseDeDados {
     
     private void relacaoComInstancias(){
         float dividendo = (float) pesquisa.getClassesComTermo().size();
-        float divisor = (float) pesquisa.getClassesComTermo().size() + pesquisa.getClassesComuns().size()+
-               pesquisa.getClassesSemTermo().size();
+        float divisor = (float) pesquisa.getClassesComTermo().size() + pesquisa.getClassesComuns().size();
         //this.valorGeral = (dividendo/divisor)*100;
         this.valorGeral = (dividendo/divisor);
         
