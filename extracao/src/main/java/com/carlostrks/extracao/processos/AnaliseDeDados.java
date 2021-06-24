@@ -79,7 +79,12 @@ public class AnaliseDeDados {
         float dividendo = (float) pesquisa.getClassesComTermo().size();
         float divisor = (float) pesquisa.getClassesComTermo().size() + pesquisa.getClassesComuns().size();
         //this.valorGeral = (dividendo/divisor)*100;
-        this.valorGeral = (dividendo/divisor);
+        //this.valorGeral = (dividendo/divisor);
+        if(divisor!=0){
+            this.valorGeral = (dividendo/divisor);
+        }else{
+            this.valorGeral = 0;
+        }
         
     }
 }
